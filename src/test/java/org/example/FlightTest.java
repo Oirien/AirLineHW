@@ -29,7 +29,7 @@ public class FlightTest {
     public void before() {
         cabinCrew = new ArrayList<>();
         pilot = new Pilot("John", Rank.CAPTAIN, "Pilot123");
-        plane = Plane.AIRBUSA380;
+        plane = Plane.CESSNA172;
         passenger = new Passenger("Bob", 2);
         passenger2 = new Passenger("Jane", 1);
         passenger3 = new Passenger("Jim", 3);
@@ -75,7 +75,7 @@ public class FlightTest {
         flight.bookPassenger(passenger2);
         flight.bookPassenger(passenger3);
         flight.bookPassenger(passenger4);
-        assertEquals(521, flight.getNumberOfAvailableSeats());
+        assertEquals(0, flight.getNumberOfAvailableSeats());
         assertEquals(4, flight.getAssignedSeats().size());
     }
 
